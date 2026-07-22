@@ -1,0 +1,35 @@
+name: SanityXBounty
+version: '1.0.0'
+main: com.sanityxbounty.SanityXBounty
+api-version: '26.1'
+description: Sanity and Bounty system plugin for Paper 26.2
+permissions:
+  sanityxbounty.use:
+    default: true
+  sanityxbounty.duel:
+    default: true
+  sanityxbounty.reload:
+    default: op
+  sanityxbounty.admin:
+    default: op
+  sanityxbounty.bypass:
+    default: false
+  sanityxbounty.effects.bypass:
+    default: false
+commands:
+  sanity:
+    description: View your current sanity and bounty information.
+    usage: /sanity [player]
+    permission: sanityxbounty.use
+  bounty:
+    description: View your current bounty rank and criminal status.
+    usage: /bounty [player]
+    permission: sanityxbounty.use
+  duel:
+    description: Challenge a player to a duel or accept/deny a duel request.
+    usage: /duel <player|accept|deny>
+    permission: sanityxbounty.duel
+  sanityxbounty:
+    description: Manage SanityXBounty plugin configuration.
+    usage: /sanityxbounty reload
+    permission: sanityxbounty.reload
